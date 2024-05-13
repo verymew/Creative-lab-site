@@ -1,8 +1,15 @@
 body{
-    margin: 0 auto;
     text-align: center;
     background-color: rgb(1, 0, 32);
     background-image: url("point.png");
+}
+.menu{
+    margin: 25px 25px;
+}
+.menu a{
+    margin: 15px;
+    text-decoration: none;
+    color: white;
 }
 .principal{
     margin: 100px 0;
