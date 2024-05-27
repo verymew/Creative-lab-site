@@ -9,6 +9,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideias lab</title>
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+                if(revealTop < windowHeight - revealPoint){
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="menu">
@@ -28,8 +44,24 @@
                 </p>
         </div>
     </section>
-    <section class="sobre"></section>
-    <section class="quemsomos"></section>
+    <section class="sobre reveal">
+        <h1 style="margin: 0; color: white;">Sobre</h1><br>
+        <div class="sbmim">
+            <img src="if.png" id="linhas" style="width: 100px;">
+            <p style="margin: 0; color: white;">Running with my dress unbuttoned. Screaming "but daddy i love him, im having his babies". No, i'm not coming into my senses.
+                i know he's crazy but he's the one i want. I'll tell you something right now: i'd rather burn my whole life down than listen to one more second of all this bitching and moaning.
+                They think they can change the beat of my heart when he touches me... and counteract the chemistry... and undo the destiny...
+                You aint gotta pray for me
+            </p>
+        </div>
+    </section>
+    <section class="sobre reveal" style="color: white;">
+        <h1>Quem somos</h1>
+        <p>It's me, hi. I'm the problem, it's me. Must be exausting alway rotting for the anti-hero.
+            dsadkadkaspodsakpodkodskodpskopakdoakdopakdopakdopakdoakdopakdpaskdoakdopakdoadopdpoaskdopop
+            dsadjaidjidjaidsajidajidasjiodjidasjdiosajiodajidjasiodjaoidjaio
+        </p>
+    </section>
     <section class="contato"></section>
 </body>
 </html>
