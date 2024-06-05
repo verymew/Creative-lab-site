@@ -72,6 +72,9 @@ body{
     flex-direction: row;
     align-items: center;
 }
+.sbmim img{
+    width: 100px;
+}
 .sobre{
     margin: 200px 0;
     height: 400px;
@@ -90,10 +93,26 @@ body{
 }
 
 @media (max-width: 650px) {
+    #logotipomenu{
+        position: absolute;
+        left: 35px;
+        top: 20px;
+    }
+    .principal img{
+        display: none;
+    }
     .principal{
         margin: 200px 0;
+        display: flex;
+        flex-direction: column;
     }
-    .principal img {
-        width: 250px;
+    .sbmim{
+        width: auto;
+    }
+    .sbmim img{
+        width: 100px;
+    }
+    .principal .texto{
+        margin-left: 0px;
     }
 }
