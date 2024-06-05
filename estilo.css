@@ -69,12 +69,13 @@ body{
     width: 600px;
     margin: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: center;
 }
 .sobre{
-    margin: 300px 0;
+    margin: 200px 0;
     height: 400px;
+    font-family:monospace;
 }
 
 .reveal{
@@ -86,4 +87,13 @@ body{
 .reveal.active{
     transform: translateY(0px);
     opacity: 1;
+}
+
+@media (max-width: 650px) {
+    .principal{
+        margin: 200px 0;
+    }
+    .principal img {
+        width: 250px;
+    }
 }
