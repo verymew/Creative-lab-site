@@ -17,6 +17,7 @@ body{
     flex-direction: row;
     justify-content: center;
     position: relative;
+    margin-bottom: 300px;
 }
 .principal img{
     width: 320px;
