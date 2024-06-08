@@ -17,6 +17,7 @@ body{
     flex-direction: row;
     justify-content: center;
     position: relative;
+    margin-bottom: 300px;
 }
 .principal img{
     width: 320px;
@@ -69,12 +70,16 @@ body{
     width: 600px;
     margin: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     align-items: center;
 }
+.sbmim img{
+    width: 100px;
+}
 .sobre{
-    margin: 300px 0;
+    margin: 200px 0;
     height: 400px;
+    font-family:monospace;
 }
 
 .reveal{
@@ -86,4 +91,29 @@ body{
 .reveal.active{
     transform: translateY(0px);
     opacity: 1;
+}
+
+@media (max-width: 650px) {
+    #logotipomenu{
+        position: absolute;
+        left: 35px;
+        top: 20px;
+    }
+    .principal img{
+        display: none;
+    }
+    .principal{
+        margin: 200px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .sbmim{
+        width: auto;
+    }
+    .sbmim img{
+        width: 100px;
+    }
+    .principal .texto{
+        margin-left: 0px;
+    }
 }
