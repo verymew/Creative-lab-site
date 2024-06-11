@@ -106,6 +106,10 @@ body{
 }
 
 @media (max-width: 650px) {
+    .principal .texto{
+        margin-left: 0px;
+        width: 100%;
+    }
     #logotipomenu{
         position: absolute;
         left: 35px;
@@ -125,8 +129,5 @@ body{
     }
     .sbmim img{
         width: 100px;
-    }
-    .principal .texto{
-        margin-left: 0px;
     }
 }
