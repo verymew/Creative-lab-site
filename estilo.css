@@ -3,6 +3,20 @@ body{
     background-color: rgb(1, 0, 32);
     background-image: url("point.png");
 }
+.abtus{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.abtus img{
+    margin: 10px;
+    margin-left: 50px;
+}
+#rafot{
+    display: flex;
+    flex-direction: row;
+}
 .menu{
     margin: 25px 25px;
 }
@@ -36,7 +50,7 @@ body{
 .principal .text2{
     width: 345px;
     overflow: hidden;
-    border-right: .3em solid orange; /* The typwriter cursor */
+    border-right: .3em solid orange; 
     animation: 
     typing 1s steps(40,end),
     blink-caret .75s step-end infinite;
@@ -46,7 +60,6 @@ body{
     to { width: 56% }
 }
   
-  /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgba(74, 16, 97, 1); }
@@ -70,15 +83,14 @@ body{
     width: 600px;
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 .sbmim img{
     width: 100px;
 }
 .sobre{
-    margin: 200px 0;
-    height: 400px;
+    margin: 300px 0;
     font-family:monospace;
 }
 
@@ -106,6 +118,7 @@ body{
         margin: 200px 0;
         display: flex;
         flex-direction: column;
+        margin-bottom: 350px;
     }
     .sbmim{
         width: auto;
