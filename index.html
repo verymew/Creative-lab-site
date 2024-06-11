@@ -10,6 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideias lab</title>
     <script>
+        //=============================Scrollar
+    document.querySelectorAll('.menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+
+      const targetElement = document.getElementById(targetId);
+
+      const menuHeight = 50; 
+      const additionalOffset = -10; 
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - menuHeight + additionalOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
+    ///====================================================    
+        //Revelar divs
         window.addEventListener('scroll', reveal);
         function reveal(){
             var reveals = document.querySelectorAll('.reveal');
@@ -27,10 +49,10 @@
     </script>
 </head>
 <body>
-    <div class="menu">
-        <a href="#">Sobre</a>
-        <a href="#">Quem somos</a>
-        <a href="#">Contato</a>
+    <div class="menu" style="font-family: monospace; font-size:large">
+        <a href="#aboutproject">Sobre</a>
+        <a href="#aboutus">Quem somos</a>
+        <a href="#contactus">Contato</a>
     </div>
     <section class="principal"> 
         <img src="Logo.svg" id="logotipo">
@@ -40,7 +62,7 @@
                 </p>
                 <img src="lab.png" id="linhas">
                 <p style="margin: 0; text-align: justify; font-size: 18px; margin-top: 40px;" id="espaco">
-                    <span style="color: white; text-align: center;">Espaço dedicado ao desenvolvimento de software com foco na criatividade e na experiência do usuário</span>
+                    <span id="aboutproject" style="color: white; text-align: center;">Espaço dedicado ao desenvolvimento de software com foco na criatividade e na experiência do usuário</span>
                 </p>
         </div>
     </section>
@@ -48,7 +70,7 @@
         <div class="sbmim">
             <img src="if.png" id="linhas">
             <br>
-            <p style="margin: 0; color: white;">O projeto Ideas creative Lab é um trabalho de extensão do curso de Sistemas de Informação do Instituto Federal Farroupilha. Nosso objetivo é fomentar a inovação e a criatividade através da metodologia de Design Thinking, 
+            <p style="margin: 0; color: white;" id="aboutus">O projeto Ideas creative Lab é um trabalho de extensão do curso de Sistemas de Informação do Instituto Federal Farroupilha. Nosso objetivo é fomentar a inovação e a criatividade através da metodologia de Design Thinking, 
                 conectando teoria e prática para resolver problemas reais da comunidade.
             </p>
         </div>
@@ -70,10 +92,17 @@
                 <img src="Ju.png" style="width: 200px;" id="linhas">
                 <div class="descricao">
                     <h1 style="color: white;">Julia </h1><h1 style="color: rgb(253, 126, 253);">/Ritter</h1>
-                    <p style="margin: 0; color: white;">- Estudante de Sistemas de Informação<br>- Colaboradora  
+                    <p style="margin: 0; color: white;" id="contactus">- Estudante de Sistemas de Informação<br>- Colaboradora  
                 </div>
             </div>
             </p>
+        </div>
+    </section>
+    <section style="align-content: center;" id="contact" class="sobre reveal">
+        <div class="cont">
+            <img src="icons8-instagram.svg">
+            <a style="color: rgb(156, 255, 209);">/ideas_creative_lab
+            </a>
         </div>
     </section>
 </body>

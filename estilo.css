@@ -1,7 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
     text-align: center;
     background-color: rgb(1, 0, 32);
     background-image: url("point.png");
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .abtus{
     display: flex;
